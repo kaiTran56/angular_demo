@@ -1,0 +1,50 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of city">{{item}}</li>
+</ul>
+<hr />
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of phone; let i = index
+					let f = first 
+					let l = last" [style.background-color]="f === true ? 'gray' : 'white'" [style.background-color]="l === true ? 'red' : f === true ? 'gray' : 'white'">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<ng-container *ngIf="check > 0; else elsePhoneBlock">
+  <div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of phone; let i = index
+					let e = even
+					let o = odd
+					trackBy: myTrackByfunction" [style.background-color]="e === true ? 'red' : 'blue'">
+          <td>{{i}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-success" (click)="onLoadData()">Load</button>
+  </div>
+</ng-container>
+<ng-template #elsePhoneBlock>
+	<h1>Nothing here !</h1>
+</ng-template>

@@ -1,0 +1,32 @@
+<h3>{{title}}</h3>
+<hr />
+<div class="form-group">
+  <label>My name: {{name}}</label>
+  <input type="text" class="form-control" [(ngModel)]="name">
+</div>
+<span class="label label-success">Gender: {{gender ===0 ? 'Female' : 'Male'}}</span>
+<select id="input" class="form-control" required="required" [(ngModel)]="gender">
+  <option value="1">Male</option>
+  <option value="0">Female</option>
+</select>
+<hr />
+<hr />
+<form>
+  <legend>Form for Two way binding</legend>
+  <div class="form-group">
+    <label for="">Name: {{username}}</label>
+    <input type="text" class="form-control" placeholder="Input field" 
+    [(ngModel)]="username"
+    [ngModelOptions]="{standalone: true}"
+    >
+    <span class="label label-info">Gender: {{isMale === 1 ? 'Male' : 'Female'}}</span>
+    <select id="input" class="form-control" required="required" 
+    [(ngModel)]='isMale'
+    [ngModelOptions]="{standalone: true}"
+    >
+    	<option value="1">Male</option>
+    	<option value="0">Female</option>
+    </select>
+  </div>
+  
+</form>

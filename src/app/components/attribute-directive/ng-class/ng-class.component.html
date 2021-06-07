@@ -1,0 +1,14 @@
+<h2 [ngClass]="['pd-10','cl-red','border-blue']">
+Hello World, let me check ngClass!
+</h2>
+<hr/>
+<h3 [ngClass]="{'pd-10':true,'cl-red':true}">
+Hello World, let me check ngClass!
+</h3>
+<hr/>
+<h3 
+	[ngClass]="setChangeStyle()"
+>
+Hello World, let me check ngClass!
+</h3>
+<button type="button" class="btn btn-success" (click)="onChange()">Change</button>

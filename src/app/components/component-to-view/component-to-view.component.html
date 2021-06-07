@@ -1,0 +1,49 @@
+<h2>Name : {{name}}</h2>
+<h3>Age: {{age}}</h3>
+<h3>Object : {{user.name}}</h3>
+<h3>Gender: {{isMan ? 'Man' : 'Kid'}}</h3>
+<h3>Function: {{showInfor()}}</h3>
+<hr />
+<img bind-src="imageAddress" class="img-responsive" alt="Image">
+<hr />
+<img [src]="imageAddress" class="img-responsive" alt="Image">
+<hr />
+<table border="1" [attr.width]="tbWidth">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>{{name}}</td>
+      <td>{{user.age}}</td>
+      <td>{{isMan ? 'Man' : 'KID'}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<div [class.table-responsive]="isBoder">
+  <table class="table" [class.table-hover]="isBoder">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>{{name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{isMan ? 'Man' : 'KID'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

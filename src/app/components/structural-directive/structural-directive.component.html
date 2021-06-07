@@ -1,0 +1,29 @@
+<h2 *ngIf="isOn">Name: {{username}}</h2>
+<button type="button" class="btn btn-danger" (click)='onToggle()'>Button</button>
+<hr />
+<hr />
+<h3>Age: {{age}}</h3>
+<div class="form-group">
+  <input type="text" class="form-control" [(ngModel)]="age">
+</div>
+
+<span class="label label-success" *ngIf="age >= 18; else elseBlock">Enough!</span>
+<ng-template #elseBlock>
+	<span class="label label-danger">Not Enough!</span>
+</ng-template>
+<hr/>
+<ng-template *ngIf ="age >=18; then enoughBlock else notEnoughBlock">	
+</ng-template>
+<ng-template #enoughBlock>
+	<span class="label label-success">Enough!</span>
+</ng-template>
+<ng-template #notEnoughBlock>
+	<span class="label label-danger">Not Enough!</span>
+</ng-template>
+<hr/>
+<ng-container *ngIf="age >=18; else notEnoughAgeBlock">
+	<span class="label label-success">Enough!</span>
+</ng-container>
+<ng-template #notEnoughAgeBlock>
+	<span class="label label-danger">Not Enough!</span>
+</ng-template>

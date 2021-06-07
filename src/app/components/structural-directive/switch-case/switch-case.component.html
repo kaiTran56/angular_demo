@@ -1,0 +1,15 @@
+<h2>Switch-Case</h2>
+<ul class="list-group" >
+  <div *ngFor="let item of user" [ngSwitch]="item.address">
+    <li class="list-group-item" *ngSwitchCase="'VN'" [style.background-color]='color'>
+      {{item.name}}-{{item.address}}
+    </li>
+    <li class="list-group-item" *ngSwitchCase="'US'" [style.background-color]="'green'">
+      {{item.name}}-{{item.address}}
+    </li>
+    <li class="list-group-item" *ngSwitchDefault [style.background-color]="'white'">
+      {{item.name}}-{{item.address}}
+    </li>
+  </div>
+</ul>
+<hr />
