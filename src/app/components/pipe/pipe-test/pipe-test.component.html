@@ -1,0 +1,84 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>model</th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>{{content}}</td>
+      <td>{{content | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>{{content}}</td>
+      <td>{{content | lowercase}}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>{{content}}</td>
+      <td>{{content | titlecase}}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>{{testNumber}}</td>
+      <td>{{testNumber | number: '6.4-4'}}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>{{testNumber}}</td>
+      <td>{{testNumber | percent: '1.0-4'}}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>{{content}}</td>
+      <td>{{content | slice:0:10}}</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>{{arr}}</td>
+      <td>{{arr | slice:0:2}}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>{{content}}</td>
+      <td>{{content | FormatData :0:20}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<hr />
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <input type="text" class="form-control" [(ngModel)]="idFilter">
+      </td>
+      <td>
+        <input type="text" class="form-control" [(ngModel)]="nameFilter">
+      </td>
+      <td>
+        <select class="form-control" required="required" [(ngModel)]="statusFilter">
+          <option value="">None</option>
+          <option value="true">Active</option>
+          <option value="false">Deactive</option>
+        </select>
+      </td>
+    </tr>
+    <tr *ngFor="let item of products | filter :idFilter :nameFilter :statusFilter">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.status? 'Active' : 'Deactive'}}</td>
+    </tr>
+  </tbody>
+</table>

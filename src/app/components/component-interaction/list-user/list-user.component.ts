@@ -11,7 +11,7 @@ export class ListUserComponent implements OnInit {
 
   @Input('txtPhone') txtPhone: string ='';
 
-  @Input('txtUsername') txtUsername: string='';
+  @Input('txtUsername') txtUsername: string='';  
 
   constructor() { }
 

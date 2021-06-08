@@ -13,6 +13,18 @@
 </nav>
 <div class="container-fluid">
   <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Pipe Angular</h3>
+        </div>
+        <div class="panel-body">
+          <app-pipe-test></app-pipe-test>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <div class="panel panel-info">
         <div class="panel-heading">
@@ -20,20 +32,17 @@
         </div>
         <div class="panel-body">
           <span class="label label-danger">Tranfer Child -> Parent</span>
-          <hr/>
+          <hr />
           <h3>Username: {{txtUsername}}</h3>
           <h3>Phone: {{txtPhone}}</h3>
-          <hr/>
-          <app-child [married]="isMarried" [age]="age" [name]="'Tran Quyet'" 
-            (username)="onGetUsername($event)"
-            (phone)="onGetPhone($event)"
-          >
+          <hr />
+          <app-child [married]="isMarried" [age]="age" [name]="'Tran Quyet'" (username)="onGetUsername($event)" (phone)="onGetPhone($event)">
           </app-child>
         </div>
       </div>
     </div>
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <app-list-user [user] ="user" [txtUsername]="txtUsername" [txtPhone]="txtPhone"></app-list-user>
+      <app-list-user [user]="user" [txtUsername]="txtUsername" [txtPhone]="txtPhone"></app-list-user>
     </div>
   </div>
 </div>

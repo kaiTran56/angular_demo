@@ -21,7 +21,7 @@ export class ChildComponent implements OnInit {
     this.onHandleUsername.emit(this.username);
     this.onHandlePhone.emit(this.phone);
   }
-
+ 
   constructor() { }
 
   ngOnInit(): void {

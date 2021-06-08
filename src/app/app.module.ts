@@ -14,6 +14,9 @@ import { SwitchCaseComponent } from './components/structural-directive/switch-ca
 import { NgClassComponent } from './components/attribute-directive/ng-class/ng-class.component';
 import { ChildComponent } from './components/component-interaction/child/child.component';
 import { ListUserComponent } from './components/component-interaction/list-user/list-user.component';
+import { PipeTestComponent } from './components/pipe/pipe-test/pipe-test.component';
+import { FormatDataPipe } from './components/pipe/custom-pipe/format-data.pipe';
+import { FilterPipe } from './components/pipe/filter-pipe/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { ListUserComponent } from './components/component-interaction/list-user/
     SwitchCaseComponent,
     NgClassComponent,
     ChildComponent,
-    ListUserComponent
+    ListUserComponent,
+    PipeTestComponent,
+    FormatDataPipe,
+    FilterPipe
    
   ],
   imports: [
