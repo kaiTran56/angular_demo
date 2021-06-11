@@ -17,6 +17,7 @@ import { ListUserComponent } from './components/component-interaction/list-user/
 import { PipeTestComponent } from './components/pipe/pipe-test/pipe-test.component';
 import { FormatDataPipe } from './components/pipe/custom-pipe/format-data.pipe';
 import { FilterPipe } from './components/pipe/filter-pipe/filter.pipe';
+import { SortPipePipe } from './components/pipe/sort-pipe/sort-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { FilterPipe } from './components/pipe/filter-pipe/filter.pipe';
     ListUserComponent,
     PipeTestComponent,
     FormatDataPipe,
-    FilterPipe
+    FilterPipe,
+    SortPipePipe
    
   ],
   imports: [

@@ -53,9 +53,17 @@ export class PipeTestComponent implements OnInit {
 
   public statusFilter: string = '';
 
+  public sortOption : number = 1;
+
+  public array: number[] =[1,9,1,2,10,100,4,5,6,2,156];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onAscending(value: number){
+    this.sortOption = value;
   }
 
 }
